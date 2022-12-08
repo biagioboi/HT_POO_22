@@ -19,6 +19,12 @@ public class Bank implements Serializable {
         this.clienti.add(c);
     }
 
+    public void addConto(BankAccount conto) {
+        this.conti.add(conto);
+        Cliente c = conto.getCliente();
+        c.addContoToCliente(conto);
+    }
+
     /**
     * Search the costumer with given costumer number and return it only if the pin matches
      * @param aNumber customer number

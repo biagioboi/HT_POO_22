@@ -13,12 +13,12 @@ public class Cliente implements Serializable {
     private final int customerPin;
     private ArrayList<BankAccount> conti;
 
-    public Cliente(String nome, String cognome, int aNumber, int aPin, ArrayList<BankAccount> conti) {
+    public Cliente(String nome, String cognome, int aNumber, int aPin) {
         this.nome = nome;
         this.cognome = cognome;
         this.customerNumber = aNumber;
         this.customerPin = aPin;
-        this.conti = conti;
+        this.conti = new ArrayList<>();
     }
 
     public int getCustomerNumber() {
